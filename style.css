@@ -40,6 +40,14 @@ html[data-theme='dark'] {
         inset -29px -29px 58px #5b6469;
 }
 
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: all 200ms !important;
+    transition-delay: 0 !important;
+}
+
 body {
     max-height: 100vh;
     background-color: var(--primary-color);

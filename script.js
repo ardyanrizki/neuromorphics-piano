@@ -47,11 +47,20 @@ document.addEventListener('keydown', function(e) {
 
 function toggle() {
 
+    const transition = () => {
+        document.documentElement.classList.add("transition");
+        window.setTimeout(() => {
+        document.documentElement,classList.remove("transition")
+        }, 500)
+    }
+
     if (document.getElementById('toggle').value == 'off'){
+        transition()
         document.documentElement.setAttribute('data-theme', 'dark');
         document.getElementById('toggle').value = 'on';
     }
     else if ( document.getElementById('toggle').value="on" ) {
+        transition()
         document.documentElement.setAttribute('data-theme', 'light');
         document.getElementById('toggle').value = 'off';
     }
