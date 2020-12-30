@@ -42,3 +42,17 @@ document.addEventListener('keydown', function(e) {
         playNote(blackKeys[blackKeyIndex])
     }
 })
+
+// CHECKBOX
+
+function toggle() {
+
+    if (document.getElementById('toggle').value == 'off'){
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('toggle').value = 'on';
+    }
+    else if ( document.getElementById('toggle').value="on" ) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.getElementById('toggle').value = 'off';
+    }
+}
